@@ -43,3 +43,12 @@ jobs:
 
       - run: npm install
       - run: npm run test
+
+      - name: Test succeded?
+        if: ${{ success() }}
+        run: echo "Test funcionó!!!"
+
+      - name: Test failed?
+        if: ${{ failure() }}
+        run: |
+          echo "Test falló, notifica por API"
