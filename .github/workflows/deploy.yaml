@@ -2,7 +2,7 @@ name: deploy
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main-x"]
 
 env:
   REGISTRY: cachac
@@ -93,8 +93,4 @@ jobs:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       with:
         image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-
-
-
-
 

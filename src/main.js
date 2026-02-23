@@ -32,6 +32,13 @@ process.on('unhandledRejection', err => {
 // health checks
 const router = express.Router()
 
+router.get('/search', (req, res) => {
+  const query = req.query.q;
+
+  // Vulnerable rendering
+  res.send(`<h1>Search Results for: ${query}</h1>`);
+});
+
 router.get('/', (req, res) => {
   logger.info(`[${config.NODE_ENV}] App: ${config.APP_NAME} v${config.APP_VERSION}. Session: ${sticky} on Port 3000`)
   res.send({ app: config.APP_NAME, env: config.NODE_ENV, port: config.NODE_PORT, version: config.APP_VERSION, sticky })
