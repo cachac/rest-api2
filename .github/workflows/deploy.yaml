@@ -57,7 +57,7 @@ jobs:
       - name: Run load test
         run: | 
           set -e  # Detiene el workflow si la prueba de carga falla.
-          artillery run loadTest/basic.yaml || exit 1
+          artillery run loadTest/basic.yaml  --record --key a9_6Z7eiHR_C3SWBV9eLFrB_0gRZFrImX69 || exit 1
 
 
 
