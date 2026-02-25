@@ -29,4 +29,3 @@ jobs:
         uses: zaproxy/action-api-scan@v0.10.0
         with:
           target: 'http://localhost:3000/search?q=123'
-          artifact_name: 'zapscanreport'
