@@ -36,7 +36,7 @@ router.get('/search', (req, res) => {
   const query = req.query.q;
 
   // Vulnerable rendering
-  res.send({ query });
+  res.send( { query } );
 });
 
 router.get('/', (req, res) => {
