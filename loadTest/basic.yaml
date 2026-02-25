@@ -24,7 +24,7 @@ scenarios:
   - name: "Healthcheck"
     flow:
       - get:
-          url: "/healthcheck"
+          url: "/random-crash"
           expect:
             - statusCode: 200
 
