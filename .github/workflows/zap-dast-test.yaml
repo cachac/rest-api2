@@ -4,6 +4,9 @@ on:
   push:
     branches: ["main"]
 
+permissions:
+  issues: write
+
 env:
   REGISTRY: cachac
   IMAGE_NAME: rest_api
